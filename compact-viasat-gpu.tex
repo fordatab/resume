@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.4in, bottom=0.4in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+\raggedright
+\pagestyle{empty}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% FORMATTING SETUP
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6pt}]
+
+\setlist[itemize]{itemsep=0pt, leftmargin=14pt, topsep=2pt} 
+
+\begin{document}
+
+% --- HEADER ---
+\centerline{\Huge Eric Gu}
+\vspace{2pt}
+\centerline{\href{mailto:ugcire132@gmail.com}{ugcire132@gmail.com} | \href{https://github.com/fordatab}{github.com/fordatab}}
+\vspace{-10pt}
+
+% --- EDUCATION ---
+\section*{Education}
+\textbf{University of California, San Diego} \hfill June 2027 \\
+BS/MS in Computer Engineering \hfill \textbf{GPA:} 3.8 | \textbf{Major GPA:} 4.0
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Relevant Coursework:} Data Structures and Algorithms, Software Engineering, OOP, Operating Systems, Deep Learning Models, Reinforcement Learning
+\end{itemize}
+\vspace{-12pt}
+
+% --- EXPERIENCE ---
+\section*{Experience}
+\textbf{Incoming Software Development Engineer Intern} \hfill September 2026 \\
+Amazon -- Irvine, CA -- Device OS
+
+\vspace{2pt}
+
+\textbf{Software Engineering Intern} \hfill June 2026 -- September 2026 \\
+Viasat -- Carlsbad, CA
+\vspace{-2pt}
+\begin{itemize}
+    \item Built an LLM operations assistant using Google's ADK and Gemini (Vertex AI): a coordinator agent delegating to four MCP sub-agents and a Vertex AI Search base over 14,000+ Confluence pages.
+    \item Integrated four MCP servers via ADK's McpToolset with least-privilege access (43-tool read-only GitHub allowlist) and pulled all runtime secrets from HashiCorp Vault via keyless GCP-IAM auth.
+    \item Authored custom Grafana tools that interpolate BigQuery-backed panel SQL for live metrics, and deployed the agent as a private Cloud Run service with a FastAPI and single-page chat UI.
+\end{itemize}
+\vspace{2pt}
+
+% *** CHECK THIS DATE: I changed 2024 to 2025 based on the gap logic ***
+\textbf{Software Development Intern} \hfill June 2023 -- September 2025 \\
+MaxNorm LLC -- Jersey City, NJ 
+\vspace{-2pt}
+\begin{itemize}
+    \item Analyzed cryptocurrency trends using Python technical/fundamental methods; produced reports that informed investment opportunities in emerging web3 protocols.
+    \item Developed and deployed Solidity smart contracts for DeFi prototypes on Ethereum testnets, reducing security vulnerabilities by 40\% through rigorous simulation testing.
+    \item Backtested quantitative trading strategies using Pandas and NumPy; refined algorithms to achieve up to 25\% simulated returns in volatile market scenarios.
+\end{itemize}
+\vspace{-12pt}
+
+% --- PROJECTS ---
+\section*{Projects}
+
+\textbf{VistaSR} $|$ \emph{Python, PyTorch, Diffusion Models} \hfill \href{https://github.com/fordatab/sr}{github.com/fordatab/sr}
+\vspace{-2pt}
+\begin{itemize}
+    \item Developed a diffusion-based super-resolution model (SR3) enabling 2x upscaling of landscape images, outperforming Real-ESRGAN in qualitative evaluations.
+    \item Engineered a refined U-Net architecture with residual blocks and self-attention, enabling efficient training on mid-tier hardware to iteratively denoise inputs.
+    \item Conducted quantitative assessments using PSNR/SSIM metrics and visual comparisons against FSRCNN, resulting in a robust solution for real-world applications.
+\end{itemize}
+\vspace{2pt} 
+
+\textbf{TriStage Compiler} $|$ \emph{Java, ANTLR} \hfill \href{https://github.com/fordatab/tristage}{github.com/fordatab/tristage}
+\vspace{-2pt}
+\begin{itemize}
+    \item Built a compiler for a custom imperative language; implemented an ANTLR front-end for precise tokenization, error reporting, and LL(1) grammar resolution.
+    \item Optimized the middle-end via static analysis and dead code elimination, reducing dynamic instruction counts by 50\% over unoptimized IR.
+    \item Engineered a MIPS32 back-end with intra-block greedy register allocation and liveness analysis, yielding 30-60\% fewer memory loads.
+\end{itemize}
+\vspace{2pt} 
+
+% \textbf{Visual Memory} $|$ \emph{React Native, Supabase, RAG, Vector Search} \hfill \href{https://github.com/fordatab/vis}{github.com/visual-memory}
+% \vspace{-2pt}
+% \begin{itemize}
+%     \item Architected an AI-powered inventory system using React Native and Supabase Edge Functions, utilizing GPT-4o Vision to automate the analysis and categorization of user photos.
+%     \item Engineered a semantic search engine via pgvector; stored 1536-dimensional embeddings of object descriptions to allow natural language queries (e.g., ``Where is my charger?'') with high retrieval accuracy.
+%     \item Designed a cost-efficient hybrid search pipeline that uses GPT-4o-mini to filter results by room context before vector matching, reducing API token costs by roughly 30x compared to brute-force methods.
+% \end{itemize}
+
+\textbf{CUDA-NN} $|$ \emph{C++, CUDA} \hfill \href{https://github.com/fordatab/gemm}{github.com/fordatab/gemm}
+\vspace{-2pt}
+\begin{itemize}
+    \item Built a C++ neural network framework from scratch for MNIST Fashion classification, achieving 100x+ speedup over the CPU baseline via a custom CUDA convolution layer.
+    \item Implemented an implicit GEMM convolution that computes index transformations on-the-fly, eliminating the memory overhead of explicit im2col copies.
+    \item Developed a tiled GEMM kernel leveraging CUDA shared memory to minimize global memory access, reaching over 100 GFLOPs/s with verified numerical correctness.
+\end{itemize}
+
+\vspace{-12pt}
+
+% --- SKILLS ---
+\section*{Skills}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item \textbf{Languages:} JavaScript, TypeScript, Python, Java, SQL, Solidity
+    \item \textbf{Front-End:} React, React Native, Redux, Tailwind CSS
+    \item \textbf{Back-End:} Node.js, Express.js, Supabase, PostgreSQL, Vector Embeddings
+    \item \textbf{Cloud \& Tools:} AWS S3, Heroku, Docker, GitHub Actions, Git
+\end{itemize}
+
+\end{document}

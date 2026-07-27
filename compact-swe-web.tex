@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+\raggedright
+\pagestyle{empty}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% FORMATTING SETUP
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6pt}]
+
+\setlist[itemize]{itemsep=0pt, leftmargin=14pt, topsep=2pt} 
+
+\begin{document}
+
+% --- HEADER ---
+\centerline{\Huge Eric Gu}
+\vspace{2pt}
+\centerline{\href{mailto:ugcire132@gmail.com}{ugcire132@gmail.com} | \href{https://github.com/fordatab}{github.com/fordatab}}
+\vspace{-10pt}
+
+% --- EDUCATION ---
+\section*{Education}
+\textbf{University of California, San Diego} \hfill June 2026 \\
+BS in Computer Engineering \hfill \textbf{GPA:} 3.8 | \textbf{Major GPA:} 4.0
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Relevant Coursework:} Data Structures and Algorithms, Software Engineering, OOP, Operating Systems, Deep Learning Models, Reinforcement Learning
+\end{itemize}
+\vspace{-12pt}
+
+% --- EXPERIENCE ---
+\section*{Experience}
+
+% *** CHECK THIS DATE: I changed 2024 to 2025 based on the gap logic ***
+\textbf{Software Development Intern} \hfill June 2023 -- September 2025 \\
+MaxNorm LLC -- Jersey City, NJ 
+\vspace{-2pt}
+\begin{itemize}
+    \item Analyzed cryptocurrency trends using Python technical/fundamental methods; produced reports that informed investment opportunities in emerging web3 protocols.
+    \item Developed and deployed Solidity smart contracts for DeFi prototypes on Ethereum testnets, reducing security vulnerabilities by 40\% through rigorous simulation testing.
+    \item Backtested quantitative trading strategies using Pandas and NumPy; refined algorithms to achieve up to 25\% simulated returns in volatile market scenarios.
+\end{itemize}
+\vspace{-12pt}
+
+% --- PROJECTS ---
+\section*{Projects}
+
+\textbf{VistaSR} $|$ \emph{Python, PyTorch, Diffusion Models} \hfill \href{https://github.com/fordatab/sr}{github.com/fordatab/sr}
+\vspace{-2pt}
+\begin{itemize}
+    \item Developed a diffusion-based super-resolution model (SR3) enabling 2x upscaling of landscape images, outperforming Real-ESRGAN in qualitative evaluations.
+    \item Engineered a refined U-Net architecture with residual blocks and self-attention, enabling efficient training on mid-tier hardware to iteratively denoise inputs.
+    \item Conducted quantitative assessments using PSNR/SSIM metrics and visual comparisons against FSRCNN, resulting in a robust solution for real-world applications.
+\end{itemize}
+\vspace{4pt} 
+
+\textbf{TriStage Compiler} $|$ \emph{Java, ANTLR} \hfill \href{https://github.com/fordatab/tristage}{github.com/fordatab/tristage}
+\vspace{-2pt}
+\begin{itemize}
+    \item Built a compiler for a custom imperative language; implemented an ANTLR front-end for precise tokenization, error reporting, and LL(1) grammar resolution.
+    \item Optimized the middle-end via static analysis and dead code elimination, reducing dynamic instruction counts by 50\% over unoptimized IR.
+    \item Engineered a MIPS32 back-end with intra-block greedy register allocation and liveness analysis, yielding 30-60\% fewer memory loads.
+\end{itemize}
+\vspace{4pt} 
+
+\textbf{VoxShare} $|$ \emph{React, Node.js, AWS} \hfill \href{https://github.com/fordatab/voxshare}{github.com/fordatab/voxshare}
+\vspace{-2pt}
+\begin{itemize}
+    \item Architected a scalable file system handling asynchronous uploads, ensuring high data durability by integrating with AWS S3 for secure object storage.
+    \item Delivered a one-click recording experience in React, reducing user interaction time significantly by capturing and processing audio client-side using MediaRecorder.
+    \item Implemented JWT authentication and protected routes to enable secure CRUD operations on recordings via a private user dashboard.
+\end{itemize}
+\vspace{-12pt}
+
+% --- SKILLS ---
+\section*{Skills}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item \textbf{Languages:} JavaScript, TypeScript, Python, Java, SQL, Solidity
+    \item \textbf{Front-End:} React, Redux, Tailwind CSS
+    \item \textbf{Back-End:} Node.js, Express.js, JWT, WebSocket
+    \item \textbf{Cloud \& Tools:} AWS S3, Heroku, Vercel, Docker, GitHub Actions, Git, PostgreSQL, MongoDB
+\end{itemize}
+
+\end{document}

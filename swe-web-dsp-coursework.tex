@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Eric Gu}
+
+\vspace{-4pt}
+
+% contact information
+\centerline{\href{mailto:ugcire132@gmail.com}{ugcire132@gmail.com} |  \href{github.com/fordatab}{github.com/fordatab}}
+
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{University of California, San Diego} -- BS in Computer Engineering  \hfill June 2026\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{GPA:} 3.781 | \textbf{Major GPA:} 3.957
+    \item \textbf{Relevant Coursework:} Data Structures and Algorithms, Software Engineering/Design Principles, Object-Oriented Programming, Signals and Systems, Digital Signal Processing, Controls
+\end{itemize}
+
+
+\vspace{-18.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Software Development Intern,} {MaxNorm LLC} -- Jersey City, NJ \hfill June 2023 -- December 2024 \
+\vspace{-9pt}
+\begin{itemize}
+\item Conducted in-depth research on cryptocurrency markets and blockchain technologies, analyzing trends using technical and fundamental methods in Python, resulting in comprehensive reports that informed potential investment opportunities and enhanced team understanding of emerging web3 protocols.
+\item Developed and deployed smart contracts in Solidity for web3 applications, focusing on decentralized finance (DeFi) prototypes and integrating with Ethereum testnets, which improved contract security through rigorous testing and reduced vulnerabilities by 40\% in simulated environments.
+\item Researched and backtested quantitative trading strategies using Python libraries like Pandas and NumPy, evaluating performance metrics such as Sharpe ratio and drawdown on historical data, leading to refined algorithms that achieved up to 25\% simulated returns in volatile market scenarios.
+\end{itemize}
+
+
+
+\vspace{-18.5pt}
+
+% projects section
+\section*{Projects}
+
+
+\textbf{VistaSR} \hfill \href{https://github.com/fordatab/sr}{https://github.com/fordatab/sr} \
+\vspace{-10pt}
+\begin{itemize}
+\item Developed a diffusion-based super-resolution model (SR3) using PyTorch, enabling 2x upscaling of landscape images with enhanced perceptual realism and semantic consistency, outperforming GAN baselines like Real-ESRGAN in qualitative evaluations on the LHQ dataset.
+\item Engineered a refined U-Net architecture incorporating sinusoidal time embeddings, residual blocks, and self-attention mechanisms, trained efficiently on mid-tier hardware to iteratively denoise Gaussian noise into high-fidelity outputs while maintaining structural integrity.
+\item Conducted comprehensive quantitative assessments using PSNR and SSIM metrics, alongside visual comparisons against FSRCNN and ESRGAN, resulting in a robust solution for real-world applications.
+\end{itemize}
+
+\textbf{TriStage Compiler} \hfill \href{https://github.com/fordatab/tristage}{https://github.com/fordatab/tristage} \
+\vspace{-10pt}
+\begin{itemize}
+\item Developed a complete compiler for a custom imperative programming language, implementing the front-end using ANTLR to create a robust lexer and parser for lexical and syntactic analysis, complete with detailed error reporting for malformed code, precise tokenization, and resolution to an unambiguous LL(1) grammar.
+\item Optimized the middle-end through advanced static analysis and dead code elimination via reaching definitions, delivering up to 50\% reduction in dynamic instruction counts over unoptimized intermediate representation (IR) code while preserving correctness on diverse test suites.
+\item Engineered the back-end targeting a MIPS32 subset, incorporating instruction selection, naive register allocation, and sophisticated intra-block greedy allocation with liveness analysis, yielding 30-60\% fewer memory loads and generating efficient assembly code runnable on the SPIM simulator. 
+\end{itemize}
+
+\textbf{VoxShare} \hfill \href{https://github.com/fordatab/voxshare}{https://github.com/fordatab/voxshare} \
+\vspace{-10pt}
+\begin{itemize}
+\item Architected a scalable file management system capable of handling asynchronous audio uploads and ensuring 99.9\% data persistence by developing a Node.js REST API integrated with AWS S3 for secure object storage.
+\item Delivered a seamless, one-click recording experience in React, reducing user interaction time from minutes to seconds by using the MediaRecorder API to capturee and process audio directly on the client-side.
+\item Implemented token-based (JWT) authentication and a protected API to enable secure content management, allowing users to perform full CRUD operations on recordings via a private user dashboard.
+\end{itemize}
+
+
+\vspace{-18.5pt}
+
+% skills section
+\section*{Skills}
+\noindent\begin{minipage}{\textwidth}
+
+
+\begin{multicols}{2}
+    \noindent\textbf{Languages:} JavaScript, TypeScript, Python, Java, SQL \\
+    \textbf{Front-End:} React, Redux, Tailwind CSS, MediaRecorder  \\
+    \textbf{Back-End:} Node.js, Express.js, JWT, WebSocket
+    
+    \columnbreak % This command forces a break to the next column
+    
+    \noindent\textbf{Cloud \& DevOps:} AWS S3, Heroku, Vercel, Docker, GitHub Actions, Git \\
+    \textbf{Databases:} PostgreSQL, MongoDB
+\end{multicols}
+\end{minipage}
+\end{document}
