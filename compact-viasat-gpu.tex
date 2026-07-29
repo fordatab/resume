@@ -96,9 +96,9 @@ MaxNorm LLC -- Jersey City, NJ
 \textbf{CUDA-NN} $|$ \emph{C++, CUDA} \hfill \href{https://github.com/fordatab/gemm}{github.com/fordatab/gemm}
 \vspace{-2pt}
 \begin{itemize}
-    \item Built a C++ neural network framework from scratch for MNIST Fashion classification, achieving 100x+ speedup over the CPU baseline via a custom CUDA convolution layer.
-    \item Implemented an implicit GEMM convolution that computes index transformations on-the-fly, eliminating the memory overhead of explicit im2col copies.
-    \item Developed a tiled GEMM kernel leveraging CUDA shared memory to minimize global memory access, reaching over 100 GFLOPs/s with verified numerical correctness.
+    \item Beat PyTorch's conv stack by 26\% (69 vs 94 ms) with a per-layer dispatcher sending the first layer to a custom CUDA kernel and the rest to cuDNN, at FP32 parity with autotuning on.
+    \item Won the single-channel first layer against autotuned cuDNN (37 vs 45 ms) with a kernel emitting all 16 output channels from one shared-memory input load.
+    \item Cut conv forward time 3x over an im2col + cuBLAS baseline across five kernel generations, in a VGG-style CNN and training framework built from scratch in C++/CUDA/Eigen.
 \end{itemize}
 
 \vspace{-12pt}
