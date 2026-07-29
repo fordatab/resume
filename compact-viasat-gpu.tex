@@ -81,7 +81,7 @@ MaxNorm LLC -- Jersey City, NJ
 \begin{itemize}
     \item Built a compiler for a custom imperative language; implemented an ANTLR front-end for precise tokenization, error reporting, and LL(1) grammar resolution.
     \item Optimized the middle-end via static analysis and dead code elimination, reducing dynamic instruction counts by 50\% over unoptimized IR.
-    \item Engineered a MIPS32 back-end with greedy register allocation and liveness analysis, cutting memory loads 30-60\%.
+    \item Engineered a MIPS32 back-end with intra-block greedy register allocation and liveness analysis, yielding 30-60\% fewer memory loads.
 \end{itemize}
 \vspace{2pt} 
 
