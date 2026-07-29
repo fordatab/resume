@@ -70,7 +70,7 @@ MaxNorm LLC -- Jersey City, NJ
 \textbf{CUDA-NN} $|$ \emph{C++, CUDA} \hfill \href{https://github.com/fordatab/gemm}{github.com/fordatab/gemm}
 \vspace{-2pt}
 \begin{itemize}
-    \item Wrote a C++/CUDA PyTorch extension swapping a custom first-layer kernel into the real framework, beating pure cuDNN end-to-end (172.9 vs 181.9 ms) with conv2--4 identical cuDNN in both arms.
+    \item Beat PyTorch's own convolution path end-to-end (172.9 vs 181.9 ms whole-net) with a C++/CUDA extension swapping in a custom first-layer kernel --- conv2--4 unchanged, so the delta is provably the kernel.
     \item Cut the single-channel conv 20\% below autotuned FP32 cuDNN (35.3 vs 44.2 ms) with one kernel replacing cuDNN's three, folding bias into the accumulator to reach the memory floor.
     \item Built a VGG-style CNN and training framework from scratch in C++/CUDA/Eigen with no ML dependencies, driving six kernel generations under CUDA-event timing with bit-identical output across all of them.
 \end{itemize}
